@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
             TestGradle85Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = "Android gradle8.7 app8.5",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
