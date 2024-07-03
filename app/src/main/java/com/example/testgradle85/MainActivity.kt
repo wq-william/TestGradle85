@@ -11,9 +11,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.testgradle85.testHttp.HttpTest
 import com.example.testgradle85.ui.theme.TestGradle85Theme
 import hz.wq.common.TestCommon
 import hz.wq.common.log.LogUtils.wqLog
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +26,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         "test log ".wqLog()
         TestCommon.getTestStr().wqLog()
+        CoroutineScope(Dispatchers.Main + SupervisorJob()).launch {
+            HttpTest.fetchData_Test_sendApi_login陈豪()
+        }
         setContent {
             TestGradle85Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
