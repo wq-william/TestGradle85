@@ -12,13 +12,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.testgradle85.ui.theme.TestGradle85Theme
-import hz.wq.utilslbrary.log.LogUtils.wqLog
+import hz.wq.common.TestCommon
+import hz.wq.common.log.LogUtils.wqLog
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         "test log ".wqLog()
+        TestCommon.getTestStr().wqLog()
         setContent {
             TestGradle85Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
