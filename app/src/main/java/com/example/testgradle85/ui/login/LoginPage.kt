@@ -33,7 +33,8 @@ class LoginViewModel : ViewModel() {
             _loginResult.emit(if (email == "123" && password == "456") LoginResult.LoginSuccess else LoginResult.LoginError)
         }
     }
-    fun resetState(){
+
+    fun resetState() {
         viewModelScope.launch {
             _loginResult.emit(LoginResult.NoState)
         }
@@ -111,14 +112,19 @@ fun LoginPage(viewModel: LoginViewModel) {
                     // 登录成功，保存数据并跳转到主页
                     // 假设你有一个保存数据的函数 saveUserData
                     // saveUserData(email)
-                    "go Home ".wqLog()
+                    "登录成功".wqLog()
                     viewModel.resetState()
                 }
 
                 is LoginResult.LoginError -> {
                     // 处理登录错误，例如显示错误消息
                     // showErrorDialog("Login failed.")
-                    "go Home error".wqLog()
+                    "登录错误".wqLog()
+                    viewModel.resetState()
+                }
+
+                is LoginResult.LoginError -> {
+                    "登录中 ".wqLog()
                     viewModel.resetState()
                 }
 
