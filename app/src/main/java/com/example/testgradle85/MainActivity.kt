@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.testgradle85.testHttp.HttpTest
+import com.example.testgradle85.ui.login.LoginPage
+import com.example.testgradle85.ui.login.LoginViewModel
 import com.example.testgradle85.ui.theme.TestGradle85Theme
 import hz.wq.common.TestCommon
 import hz.wq.common.log.LogUtils.wqLog
@@ -30,14 +32,15 @@ class MainActivity : ComponentActivity() {
             HttpTest.fetchData_Test_sendApi_login陈豪()
         }
         setContent {
-            TestGradle85Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android gradle8.7 app8.5",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            LoginPage(LoginViewModel())
+//            TestGradle85Theme {
+//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//                    Greeting(
+//                        name = "Android gradle8.7 app8.5",
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
+//                }
+//            }
         }
     }
 }
