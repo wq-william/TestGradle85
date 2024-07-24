@@ -5,7 +5,6 @@ package com.example.testgradle85.ui.login
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Lock
@@ -17,20 +16,11 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import com.example.testgradle85.ui.common.CommonTopAppBar
 import com.example.testgradle85.ui.common.ImgButton
 import com.example.testgradle85.ui.login.enums.LoginResult
 import com.example.testgradle85.ui.login.viewModel.LoginViewModel
-import com.example.testgradle85.viewModel.CommonViewModel
-import hz.wq.common.log.LogUtils.wqLog
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.launch
+import hz.wq.common.util.log.LogUtils.wqLog
 
 // ViewModel 示例
 

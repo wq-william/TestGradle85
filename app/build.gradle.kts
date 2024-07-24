@@ -64,9 +64,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("io.github.wq-william:httpLib:0.2")
-    implementation("io.github.wq-william:common:0.1")
-    implementation("io.github.wq-william:composeLib:0.1.4")
+    implementation("io.github.wq-william:httpLib:0.2.1")
+    implementation("io.github.wq-william:common:0.2")
+    implementation("io.github.wq-william:composeLib:0.2")
 //    implementation("io.github.wq-william:wholeLib:0.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 }

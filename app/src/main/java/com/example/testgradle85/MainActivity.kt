@@ -15,7 +15,7 @@ import com.example.testgradle85.ui.login.LoginPage
 import com.example.testgradle85.ui.login.viewModel.LoginViewModel
 import com.example.testgradle85.ui.theme.TestGradle85Theme
 import hz.wq.common.TestCommon
-import hz.wq.common.log.LogUtils.wqLog
+import hz.wq.common.util.log.LogUtils.wqLog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -28,9 +28,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         "test log ".wqLog()
         TestCommon.getTestStr().wqLog()
-        CoroutineScope(Dispatchers.Main + SupervisorJob()).launch {
-            HttpTest.fetchData_Test_sendApi_login陈豪()
-        }
+//        CoroutineScope(Dispatchers.Main + SupervisorJob()).launch {
+//            HttpTest.fetchData_Test_sendApi_login陈豪()
+//        }
         setContent {
             LoginPage(viewModel)
 //            TestGradle85Theme {
